@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>My Multimedia Blog</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+
+        /* ========================================= */
+        /* BASIC PAGE SETTINGS */
+        /* ========================================= */
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+            scroll-padding-top: 20px;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #20263a 0%,
+                    #10131a 35%,
+                    #080a0f 100%
+                );
+
+            color: #f5f5f5;
+
+            font-family: "Poppins", Arial, sans-serif;
+
+            padding: 30px;
+
+            min-height: 100vh;
+
+        }
+
+
+        /* ========================================= */
+        /* MAIN PAGE SHEET */
+        /* ========================================= */
+
+
+        .page {
+
+            max-width: 1500px;
+
+            margin: auto;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.04),
+                    rgba(255,255,255,0.01)
+                );
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 25px 80px rgba(0,0,0,0.55);
+
+        }
+
+
+        /* ========================================= */
+        /* MAIN HEADING */
+        /* ========================================= */
+
+
+        h1 {
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 58px;
+
+            font-weight: 800;
+
+            text-align: center;
+
+            line-height: 1.15;
+
+            letter-spacing: 1px;
+
+            margin-top: 10px;
+
+            margin-bottom: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #39ff14,
+                    #00d9ff,
+                    #b45cff,
+                    #ff4fd8,
+                    #ffe600
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            text-shadow:
+                0 0 30px rgba(0,217,255,0.12);
+
+        }
+
+
+        /* ========================================= */
+        /* INTRODUCTION */
+        /* ========================================= */
+
+
+        .intro {
+
+            text-align: center;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            color: #c9ced8;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ========================================= */
+        /* NAVIGATION */
+        /* ========================================= */
+
+
+        .navigation {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin: 25px 0 35px;
+
+        }
+
+
+        .navigation a {
+
+            text-decoration: none;
+
+        }
+
+
+        .nav-button {
+
+            padding: 12px 22px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            font-family: "Poppins", Arial, sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        .songs-button {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #39ff14,
+                    #00c853
+                );
+
+            color: #061006;
+
+            box-shadow:
+                0 5px 20px rgba(57,255,20,0.25);
+
+        }
+
+
+        .trailer-button {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe600,
+                    #ff9800
+                );
+
+            color: #171000;
+
+            box-shadow:
+                0 5px 20px rgba(255,193,7,0.25);
+
+        }
+
+
+        .top-button {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00d9ff,
+                    #7c4dff
+                );
+
+            color: white;
+
+            box-shadow:
+                0 5px 20px rgba(0,217,255,0.25);
+
+        }
+
+
+        .nav-button:hover {
+
+            transform: translateY(-3px) scale(1.03);
+
+        }
+
+
+        .nav-button:active {
+
+            transform: scale(0.96);
+
+        }
+
+
+        /* ========================================= */
+        /* SECTION HEADINGS */
+        /* ========================================= */
+
+
+        .section-heading {
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 32px;
+
+            font-weight: 800;
+
+            margin-top: 20px;
+
+            margin-bottom: 25px;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        .songs-heading {
+
+            color: #ff4fd8;
+
+            text-shadow:
+                0 0 20px rgba(255,79,216,0.2);
+
+        }
+
+
+        .trailers-heading {
+
+            color: #ffe600;
+
+            text-shadow:
+                0 0 20px rgba(255,230,0,0.2);
+
+        }
+
+
+        /* ========================================= */
+        /* SECTION CONTAINERS */
+        /* ========================================= */
+
+
+        .section-box {
+
+            background:
+                rgba(255,255,255,0.025);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 22px;
+
+            padding: 22px;
+
+        }
+
+
+        /* ========================================= */
+        /* SONG GRID */
+        /* ========================================= */
+
+
+        .songs-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+
+        }
+
+
+        /* ========================================= */
+        /* SONG CARD */
+        /* ========================================= */
+
+
+        .song {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #191d28,
+                    #0d1017
+                );
+
+            border: 1px solid #454b5c;
+
+            border-radius: 20px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.25);
+
+        }
+
+
+        .song:hover {
+
+            transform: translateY(-7px);
+
+            border-color: #ff4fd8;
+
+            box-shadow:
+                0 15px 35px rgba(255,79,216,0.18);
+
+        }
+
+
+        /* ========================================= */
+        /* ALBUM IMAGE */
+        /* ========================================= */
+
+
+        .song img {
+
+            width: 180px;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 16px;
+
+            border: 2px solid rgba(255,255,255,0.8);
+
+            margin-bottom: 12px;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.5);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+        }
+
+
+        .song:hover img {
+
+            transform: scale(1.05);
+
+            box-shadow:
+                0 12px 30px rgba(255,79,216,0.25);
+
+        }
+
+
+        /* ========================================= */
+        /* SONG NAME */
+        /* ========================================= */
+
+
+        .song h3 {
+
+            color: #ffe600;
+
+            font-size: 17px;
+
+            margin: 8px 0 14px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* ========================================= */
+        /* AUDIO PLAYER */
+        /* ========================================= */
+
+
+        .song audio {
+
+            width: 100%;
+
+            height: 36px;
+
+        }
+
+
+        /* ========================================= */
+        /* DIVIDER */
+        /* ========================================= */
+
+
+        hr {
+
+            border: none;
+
+            height: 2px;
+
+            margin: 45px 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #39ff14,
+                    #00d9ff,
+                    #ff4fd8,
+                    #ffe600,
+                    transparent
+                );
+
+        }
+
+
+        /* ========================================= */
+        /* MOVIE GRID */
+        /* ========================================= */
+
+
+        .movies-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+
+        }
+
+
+        /* ========================================= */
+        /* MOVIE CARD */
+        /* ========================================= */
+
+
+        .movie {
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #191d28,
+                    #0b0e14
+                );
+
+            border: 1px solid #4b5263;
+
+            border-radius: 20px;
+
+            padding: 18px;
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.3);
+
+            animation:
+                cardAppear 0.7s ease both;
+
+        }
+
+
+        .movie:hover {
+
+            transform: translateY(-7px);
+
+            border-color: #00d9ff;
+
+            box-shadow:
+                0 15px 40px rgba(0,217,255,0.16);
+
+        }
+
+
+        /* ========================================= */
+        /* MOVIE HEADING */
+        /* ========================================= */
+
+
+        .movie h3 {
+
+            font-family: "Poppins", Arial, sans-serif;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            color: #f5f5f5;
+
+            margin-top: 0;
+
+        }
+
+
+        /* ========================================= */
+        /* VIEW COUNT */
+        /* ========================================= */
+
+
+        mark {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffe600,
+                    #ffb300
+                );
+
+            color: #090909;
+
+            padding: 4px 7px;
+
+            border-radius: 6px;
+
+            font-weight: 800;
+
+        }
+
+
+        /* ========================================= */
+        /* MOVIE IMAGE */
+        /* ========================================= */
+
+
+        .movie img {
+
+            width: 190px;
+
+            height: 250px;
+
+            object-fit: cover;
+
+            display: block;
+
+            margin: 15px auto;
+
+            border-radius: 13px;
+
+            border: 2px solid #ffb300;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.55);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+        }
+
+
+        .movie:hover img {
+
+            transform: scale(1.03);
+
+            box-shadow:
+                0 12px 30px rgba(255,179,0,0.2);
+
+        }
+
+
+        /* ========================================= */
+        /* YOUTUBE TRAILER */
+        /* ========================================= */
+
+
+        iframe {
+
+            width: 100%;
+
+            height: 235px;
+
+            border: none;
+
+            border-radius: 14px;
+
+            margin-top: 10px;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.5);
+
+        }
+
+
+        /* ========================================= */
+        /* MOVIE DESCRIPTION */
+        /* ========================================= */
+
+
+        .movie p {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color: #c7ccd6;
+
+        }
+
+
+        .movie p strong {
+
+            color: #ffffff;
+
+        }
+
+
+        /* ========================================= */
+        /* BOTTOM NAVIGATION */
+        /* ========================================= */
+
+
+        .bottom-navigation {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 40px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,0.1);
+
+        }
+
+
+        /* ========================================= */
+        /* FLOATING BACK TO TOP */
+        /* ========================================= */
+
+
+        .floating-top {
+
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 48px;
+
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-decoration: none;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00d9ff,
+                    #7c4dff
+                );
+
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.45);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .floating-top:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0,217,255,0.3);
+
+        }
+
+
+        /* ========================================= */
+        /* CARD ANIMATION */
+        /* ========================================= */
+
+
+        @keyframes cardAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(20px);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        /* ========================================= */
+        /* TABLET */
+        /* ========================================= */
+
+
+        @media (max-width: 1000px) {
+
+            body {
+
+                padding: 15px;
+
+            }
+
+
+            .page {
+
+                padding: 25px;
+
+            }
+
+
+            h1 {
+
+                font-size: 45px;
+
+            }
+
+
+            .songs-container,
+            .movies-container {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+            }
+
+        }
+
+
+        /* ========================================= */
+        /* MOBILE */
+        /* ========================================= */
+
+
+        @media (max-width: 650px) {
+
+            body {
+
+                padding: 8px;
+
+            }
+
+
+            .page {
+
+                padding: 15px;
+
+                border-radius: 18px;
+
+            }
+
+
+            h1 {
+
+                font-size: 34px;
+
+            }
+
+
+            .intro {
+
+                font-size: 14px;
+
+            }
+
+
+            .section-heading {
+
+                font-size: 25px;
+
+            }
+
+
+            .songs-container,
+            .movies-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .song img {
+
+                width: 170px;
+
+                height: 170px;
+
+            }
+
+
+            .movie img {
+
+                width: 180px;
+
+                height: 240px;
+
+            }
+
+
+            iframe {
+
+                height: 220px;
+
+            }
+
+
+            .floating-top {
+
+                right: 15px;
+
+                bottom: 15px;
+
+                width: 44px;
+
+                height: 44px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body id="top">
+
+
+
+<div class="page">
+
+
+
+    <!-- ================================= -->
+    <!-- MAIN HEADING -->
+    <!-- ================================= -->
+
+
+    <h1>
+
+        Music I love & the biggest Indian blockbusters,
+        all in one place.
+
+    </h1>
+
+
+
+    <p class="intro">
+
+        <i>
+
+            A sticker-book of sound and cinema, sponsored by SUKESH -
+            favourite tracks on top, then the most watched
+            Indian film trailers on YouTube.
+
+        </i>
+
+    </p>
+
+
+
+    <!-- ================================= -->
+    <!-- TOP NAVIGATION -->
+    <!-- ================================= -->
+
+
+    <div class="navigation">
+
+
+        <a href="#songs">
+
+            <button class="nav-button songs-button">
+
+                🎵 Play the Songs
+
+            </button>
+
+        </a>
+
+
+        <a href="#top-trailers">
+
+            <button class="nav-button trailer-button">
+
+                🎬 Most Watched Top Trailers
+
+            </button>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- ================================= -->
+    <!-- SONGS SECTION -->
+    <!-- ================================= -->
+
+
+    <section id="songs">
+
+
+        <h2 class="section-heading songs-heading">
+
+            🎵 Some of the favourite songs of mine
+
+        </h2>
+
+
+
+        <div class="section-box">
+
+
+            <div class="songs-container">
+
+
+
+                <!-- SONG 1 -->
+
+
+                <div class="song">
+
+                    <img
+                        src="./assests/album1..jpg"
+                        alt="Song 1 Album Cover"
+                    >
+
+                    <h3>
+                        SONG 1 🕺
+                    </h3>
+
+                    <audio
+                        src="./assests/SONG 1.mp3"
+                        controls>
+                    </audio>
+
+                </div>
+
+
+
+                <!-- SONG 2 -->
+
+
+                <div class="song">
+
+                    <img
+                        src="./assests/album2.jpg"
+                        alt="Song 2 Album Cover"
+                    >
+
+                    <h3>
+                        SONG 2 🕺
+                    </h3>
+
+                    <audio
+                        src="./assests/SONG 2.mp3"
+                        controls>
+                    </audio>
+
+                </div>
+
+
+
+                <!-- SONG 3 -->
+
+
+                <div class="song">
+
+                    <img
+                        src="./assests/album3.jpg"
+                        alt="Song 3 Album Cover"
+                    >
+
+                    <h3>
+                        SONG 3 🕺
+                    </h3>
+
+                    <audio
+                        src="./assests/SONG 3.mp3"
+                        controls>
+                    </audio>
+
+                </div>
+
+
+
+                <!-- SONG 4 -->
+
+
+                <div class="song">
+
+                    <img
+                        src="./assests/album4.jpg"
+                        alt="Song 4 Album Cover"
+                    >
+
+                    <h3>
+                        SONG 4 🕺
+                    </h3>
+
+                    <audio
+                        src="./assests/SONG 4.mp3"
+                        controls>
+                    </audio>
+
+                </div>
+
+
+
+                <!-- SONG 5 -->
+
+
+                <div class="song">
+
+                    <img
+                        src="./assests/album5.jpg"
+                        alt="Song 5 Album Cover"
+                    >
+
+                    <h3>
+                        SONG 5 🕺
+                    </h3>
+
+                    <audio
+                        src="./assests/SONG 5.mp3"
+                        controls>
+                    </audio>
+
+                </div>
+
+
+
+                <!-- SONG 6 -->
+
+
+                <div class="song">
+
+                    <img
+                        src="./assests/album6.jpg"
+                        alt="Song 6 Album Cover"
+                    >
+
+                    <h3>
+                        SONG 6 🕺
+                    </h3>
+
+                    <audio
+                        src="./assests/SONG 6.mp3"
+                        controls>
+                    </audio>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- DIVIDER -->
+    <!-- ================================= -->
+
+
+    <hr>
+
+
+
+    <!-- ================================= -->
+    <!-- TRAILERS SECTION -->
+    <!-- ================================= -->
+
+
+    <section id="top-trailers">
+
+
+        <h2 class="section-heading trailers-heading">
+
+            🎬 TOP 11 Most-Watched Indian Trailers in 24 Hours
+
+        </h2>
+
+
+
+        <div class="section-box">
+
+
+            <div class="movies-container">
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 1 : SALAAR -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        1. Salaar: Part 1 – Ceasefire -
+
+                        <mark>113.2 million views</mark>
+
+                        😲
+
+                    </h3>
+
+
+                    <img
+                        src="./assests/image1.jpg"
+                        alt="Salaar Part 1 Ceasefire"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/4GPvYMKtrtI"
+                        title="Salaar Part 1 Ceasefire Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Salaar: Part 1 – Ceasefire</strong>
+                        is a 2023 Telugu-language action thriller
+                        directed by Prashanth Neel.
+
+                        The film stars Prabhas and Prithviraj Sukumaran.
+
+                        The story follows Deva and Varadha in the
+                        fictional city-state of Khansaar.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 2 : KGF -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        2. K.G.F: Chapter 2 -
+
+                        <mark>106.5 million views</mark>
+
+                        😱
+
+                    </h3>
+
+
+                    <img
+                        src="https://m.media-amazon.com/images/S/pv-target-images/ef222e4c367082c8f94315fbf5b62d350547c5e2589a97f12d5414979c64a9fc.jpg"
+                        alt="KGF Chapter 2"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/jQsE85cI384"
+                        title="KGF Chapter 2 Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>KGF: Chapter 2</strong> is a 2022
+                        Kannada-language period action film directed
+                        by Prashanth Neel.
+
+                        It is the sequel to KGF: Chapter 1.
+
+                        The film stars Yash, Sanjay Dutt,
+                        Raveena Tandon and Srinidhi Shetty.
+
+                        The story continues Rocky's journey in the
+                        Kolar Gold Fields.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 3 : PUSHPA 2 -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        3. Pushpa 2: The Rule -
+
+                        <mark>104.2 million views</mark>
+
+                        😵
+
+                    </h3>
+
+
+                    <img
+                        src="https://i.pinimg.com/736x/31/b1/ea/31b1ea4c9e3d8302460b69f00e31c74a.jpg"
+                        alt="Pushpa 2 The Rule"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/g3JUbgOHgdw"
+                        title="Pushpa 2 The Rule Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Pushpa 2: The Rule</strong> is a 2024
+                        Telugu-language action drama directed by Sukumar.
+
+                        The film stars Allu Arjun, Rashmika Mandanna
+                        and Fahadh Faasil.
+
+                        The story continues Pushpa Raj's journey as a
+                        red-sandalwood smuggler.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 4 : PEDDI -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        4. Peddi -
+
+                        <mark>85.72 million views</mark>
+
+                        🔥
+
+                    </h3>
+
+
+                    <img
+                        src="https://img.youtube.com/vi/sF2dj7ycZvA/maxresdefault.jpg"
+                        alt="Peddi"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/sF2dj7ycZvA"
+                        title="Peddi Official Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Peddi</strong> is a 2026 Telugu-language
+                        sports action drama directed by Buchi Babu Sana.
+
+                        The film stars Ram Charan, Janhvi Kapoor,
+                        Shiva Rajkumar, Jagapathi Babu and Divyenndu.
+
+                        The story is set in rural Andhra Pradesh and
+                        follows Peddi, a talented sportsman who becomes
+                        involved in a struggle for his village and community.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 5 : ADIPURUSH -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        5. Adipurush -
+
+                        <mark>74 million views</mark>
+
+                        🏹
+
+                    </h3>
+
+
+                    <img
+                        src="https://img.youtube.com/vi/X7lRGozX8KQ/maxresdefault.jpg"
+                        alt="Adipurush"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/scNmYjoR-qM"
+                        title="Adipurush Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Adipurush</strong> is a 2023 Indian
+                        mythological action film directed by Om Raut.
+
+                        The film stars Prabhas, Kriti Sanon,
+                        Saif Ali Khan and Sunny Singh.
+
+                        It is inspired by the Hindu epic Ramayana
+                        and follows the story of Raghav and his
+                        journey against Lankesh.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 6 : SALAAR RELEASE TRAILER -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        6. Salaar (Release Trailer) -
+
+                        <mark>72.2 million views</mark>
+
+                        💥
+
+                    </h3>
+
+
+                    <img
+                        src="https://img.youtube.com/vi/Joo_jE8kMDg/maxresdefault.jpg"
+                        alt="Salaar Release Trailer"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/Joo_jE8kMDg"
+                        title="Salaar Release Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Salaar Release Trailer</strong> is the
+                        release trailer for Salaar: Part 1 – Ceasefire.
+
+                        It features Prabhas, Prithviraj Sukumaran,
+                        Shruti Haasan and other members of the cast.
+
+                        The trailer presents the film's action,
+                        characters and world of Khansaar.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 7 : ANIMAL -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        7. Animal -
+
+                        <mark>71.4 million views</mark>
+
+                        🐺
+
+                    </h3>
+
+
+                    <img
+                        src="https://img.youtube.com/vi/8FkLRUJj-o0/maxresdefault.jpg"
+                        alt="Animal"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/8FkLRUJj-o0"
+                        title="Animal Official Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Animal</strong> is a 2023 Hindi-language
+                        action drama directed by Sandeep Reddy Vanga.
+
+                        The film stars Ranbir Kapoor, Anil Kapoor,
+                        Rashmika Mandanna and Bobby Deol.
+
+                        The story follows Ranvijay and his complicated
+                        relationship with his father Balbir.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 8 : GAME CHANGER -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        8. Game Changer -
+
+                        <mark>62 million views</mark>
+
+                        ⚡
+
+                    </h3>
+
+
+                    <img
+                        src="https://img.youtube.com/vi/QSu9-DBjMPI/maxresdefault.jpg"
+                        alt="Game Changer"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/QSu9-DBjMPI"
+                        title="Game Changer Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Game Changer</strong> is a 2025
+                        Telugu-language political action thriller
+                        directed by S. Shankar.
+
+                        The film stars Ram Charan, Kiara Advani,
+                        Anjali and S. J. Suryah.
+
+                        The story follows an honest IAS officer who
+                        enters politics and fights corruption.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 9 : HARI HARA VEERA MALLU -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        9. Hari Hara Veera Mallu (HHVM) -
+
+                        <mark>59.44 million views</mark>
+
+                        ⚔️
+
+                    </h3>
+
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BNzk3MDIyMGQtNWFmYi00MzA0LWFhMTEtYTc1NjU2NWNmZjliXkEyXkFqcGc@._V1_.jpg"
+                        alt="Hari Hara Veera Mallu"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/oVEWp_ZIJUs"
+                        title="Hari Hara Veera Mallu Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Hari Hara Veera Mallu</strong> is a 2025
+                        Telugu-language historical action-adventure film.
+
+                        It stars Pawan Kalyan, Nidhhi Agerwal and Bobby Deol.
+
+                        The story is set during the Mughal period and
+                        follows Veera Mallu on a mission involving the
+                        Koh-i-Noor.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 10 : DUNKI -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        10. Dunki -
+
+                        <mark>58.57 million views</mark>
+
+                        ❤️
+
+                    </h3>
+
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BMThhZjM4M2UtYmE1NC00YTMzLTk3ZTAtNmQ1ZmI4YmRmZGE1XkEyXkFqcGc@._V1_.jpg"
+                        alt="Dunki"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/Zd69FfhBmSc"
+                        title="Dunki Official Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Dunki</strong> is a 2023 Hindi-language
+                        comedy-drama directed by Rajkumar Hirani.
+
+                        The film stars Shah Rukh Khan, Taapsee Pannu,
+                        Boman Irani and Vicky Kaushal.
+
+                        The story follows a group of friends and their
+                        journey connected with immigration and their
+                        determination to reach another country.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- MOVIE 11 : SKY FORCE -->
+                <!-- ================================= -->
+
+
+                <div class="movie">
+
+                    <h3>
+
+                        11. Sky Force -
+
+                        <mark>57.7 million views</mark>
+
+                        ✈️
+
+                    </h3>
+
+
+                    <img
+                        src="https://m.media-amazon.com/images/M/MV5BNDBkYWNkNmEtNTdjNS00YzZjLWIzZjMtMmEwZTNhYjJiYWM4XkEyXkFqcGc@._V1_.jpg"
+                        alt="Sky Force"
+                    >
+
+
+                    <iframe
+                        src="https://www.youtube.com/embed/CgruxokrhjQ"
+                        title="Sky Force Official Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+
+
+                    <p>
+
+                        <strong>Sky Force</strong> is a 2025 Hindi-language
+                        war drama directed by Sandeep Kewlani and
+                        Abhishek Anil Kapur.
+
+                        The film stars Akshay Kumar, Veer Pahariya,
+                        Sara Ali Khan and Nimrat Kaur.
+
+                        The story is centred around India's airstrike
+                        at the Sargodha airbase during the 1965
+                        Indo-Pakistani war.
+
+                    </p>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- BOTTOM NAVIGATION -->
+    <!-- ================================= -->
+
+
+    <div class="bottom-navigation">
+
+
+        <a href="#songs">
+
+            <button class="nav-button songs-button">
+
+                ↑ Back to songs
+
+            </button>
+
+        </a>
+
+
+        <a href="#top-trailers">
+
+            <button class="nav-button trailer-button">
+
+                🎬 Go to Trailers
+
+            </button>
+
+        </a>
+
+
+        <a href="#top">
+
+            <button class="nav-button top-button">
+
+                ↑ Back to Top
+
+            </button>
+
+        </a>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- FLOATING BACK TO TOP BUTTON -->
+<!-- ================================= -->
+
+
+<a
+    href="#top"
+    class="floating-top"
+    title="Back to Top"
+    aria-label="Back to Top"
+>
+
+    ↑
+
+</a>
+
+
+
+</body>
+
+</html>
